@@ -10,7 +10,7 @@ extern void Configurar_UART0(void) //UART1
     GPIOA->PCTL = (GPIOA->PCTL&0xFFFFFF00) | 0x00000011;// 
     GPIOA->DEN = (1<<0) | (1<<1);// Habilitamos canales digitales
     //UART0 UART Control (UARTCTL) pag.918 DISABLE!!
-    UART1->CTL |= (0<<9) | (0<<8) | (0<<0);
+    UART0->CTL = (0<<9) | (0<<8) | (0<<0);
 
 
     // UART Integer Baud-Rate Divisor (UARTIBRD) pag.914
@@ -33,10 +33,11 @@ extern void Configurar_UART0(void) //UART1
 extern char readChar(void)
 {
     int v;
-    int c;
+    char c;
     while ((UART0->FR & (1<<4)) != 0);
     v = UART0 -> DR & 0XFF;
     c = v;
     return c;
     
 }
+

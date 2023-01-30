@@ -1,9 +1,9 @@
 
 #include "lib/include.h"
 
-/* Tomando el Módulo 0 del PWM1 Generador 0 -> PB7
-   Tomando el Módulo0  del PWM2 Generador 1 -> PB4
-   Tomando el Módulo0P del PWM4 Generador 2 -> PE4*/
+/* Tomando el Módulo 0  del PWM1 Generador 0 -> PB7
+   Tomando el Módulo 0  del PWM2 Generador 1 -> PB4
+   Tomando el Módulo 0  del PWM4 Generador 2 -> PE4*/
 
 extern void Configura_Reg_PWM1(uint16_t freq)
 {
